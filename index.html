@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who's a popular dog?</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/dogbreeds.js" defer></script>
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <!-- Starting screen -->
+    <div class="landing-container">
+        <img
+          class="background-dog"
+          src="./dogImages/background.jpg"
+          alt="background image of a dog"
+        />
+        <div class="start-container">
+            <div class="title">Who's a popular dog?</div>
+            <button class="start-game">Start Game</button>
+        </div>
+    </div>
+    <!-- add instructions here -->
+    <div class="how-to">
+      <header>Instructions of the game</header>
+
+      <section class="instructions">
+        <div class="info">
+          - The most popular dog is the one registered by the most owners.
+        </div>
+        <div class="info">
+          - Click on the dog you believe to be more popular of the two shown.
+        </div>
+        <div class="info">
+          - If you are correct click the next button to move on.
+        </div>
+        <div class="info">- A running total will be kept of your score.</div>
+        <div class="info">- Repeat this process to set a new high score!!</div>
+      </section>
+
+      <footer>
+          <button class="exit">Exit Game</button>
+          <button class="continue">Continue</button>
+      </footer>
+    </div>
+
+    <!-- Game -->
+    <div class="game">
+      <div class="dog-container">
+        <div class = "game-title">Most popular dog</div>
+        <div class="first-dog">
+          <!-- img of dog -->
+          <img src="./dogImages/beagle.jpg" alt="Beagle" class = "dog-one" id="Beagle">
+        </div>
+        <div class="or"><p>OR</p></div>
+        <div class="second-dog">
+          <!-- img of dog -->
+           <img src="./dogImages/French Bulldog.jpg" alt="French Bulldog" class = "dog-two" id="French Bulldog">
+        </div>
+      </div>
+
+      <div class="gameInfo">
+        <div class = "score">
+          <div class="score-title">
+            <p>Score:</p>
+          </div>
+          <div class="running-score">
+            <!-- input score -->0
+          </div>
+        </div>
+          <button class="next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- wrong answer pop up -->
+    <div class="pop-up">
+      <div class = "game-over-text">
+        <div class="wrong-text">
+          The answer was
+          <span class="right-answer">
+            <!-- correct dog name  -->
+          </span>
+          but you chose
+          <span class="wrong-answer">
+            <!-- wrong dog name chosen by player -->
+          </span>
+        </div>
+      </div>
+      <div class="score">
+        <div class="final-score-text">Final Score:</div>
+        <div class="final-score">
+          <!-- input final score running total -->
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="exit">Exit Game</button>
+        <button class="continue">Continue</button>
+      </div>
+    </div>
+  </body>
+</html>

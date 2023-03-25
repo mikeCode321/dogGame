@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #494d5f;
+  color: aliceblue;
+  position: absolute;
+  display: inline block;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.landing-container {
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  height: 550px;
+  width: 550px;
+  display: flex;
+  visibility: visible;
+}
+
+.background-dog {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 30px;
+  opacity: 0.5;
+}
+
+.start-container {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  padding: 1em;
+  z-index: 5;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.start-container .title {
+  font-weight: 800;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.start-container .start-game {
+  font-size: 15px;
+  font-weight: 500;
+  color: #3593c6;
+  padding: 15px 30px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* center all containers in the middle of the page */
+.how-to,
+.game,
+.pop-up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 rgb(35, 30, 30);
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid #b2b0b4;
+  opacity: 1;
+}
+
+.how-to {
+  color: black;
+  width: 540px;
+  height: 300px;
+  background: #fff;
+  border-radius: 10px;
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: all 0.3s ease;
+  opacity: 1;
+  padding: 25px;
+  display: block;
+  visibility: hidden;
+}
+
+.active {
+  visibility: visible;
+}
+
+.how-to header {
+  font-weight: 800;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 5px;
+  pointer-events: none;
+}
+
+section.instructions {
+  padding: 10px;
+  margin: 5px;
+  font-size: auto;
+  pointer-events: none;
+}
+
+.how-to footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  column-gap: 200px;
+}
+
+.exit {
+  font-size: 15px;
+  font-weight: 500;
+  color: #3593c6;
+  padding: 15px 30px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.continue {
+  font-size: 15px;
+  font-weight: 500;
+  color: #3593c6;
+  padding: 15px 30px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.game {
+  display: block;
+  visibility: hidden;
+  width: 540px;
+  height: 540px;
+}
+
+.first-dog img {
+  position: absolute;
+  left: 40px;
+  top: 30%;
+  width: 200px;
+  height: 200px;
+  transform: translate(10px, -10px);
+  border-radius: 15px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.second-dog img {
+  position: absolute;
+  right: 40px;
+  top: 30%;
+  width: 200px;
+  height: 200px;
+  transform: translate(-10px, -10px);
+  border-radius: 15px;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.game-title {
+  /* position: absolute; */
+  margin-top: 90px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  width: 100%;
+  color: rgb(25, 24, 24);
+  /* text-decoration: underline; */
+  /* border: 1px solid black; */
+  text-align: center;
+  /* top: 50%; */
+}
+
+.or {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gameInfo .score {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.disable{
+  pointer-events: none;
+}
+
+.gameInfo .next-btn {
+  position: absolute;
+  left: 85%;
+  bottom: 10px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+  padding: 5px 15px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.pop-up {
+  display: inline-block;
+  visibility: hidden;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  background: #fff;
+  color: black;
+}
+
+.pop-up .game-over-text,
+.pop-up .score,
+.pop-up .buttons {
+  position: relative;
+  top: 90px;
+}
+
+.pop-up .buttons,
+.pop-up .score {
+  margin: 15px;
+}
+
+.pop-up .buttons {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+.pop-up .buttons button {
+  padding: 10px;
+}
